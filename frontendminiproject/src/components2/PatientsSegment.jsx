@@ -35,7 +35,7 @@ function PatientSegment() {
   const [viewMode, setViewMode]       = useState("cards"); // "cards" | "table"
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/history")
+    fetch("https://ttdeployment-1-gwu6.onrender.com/api/history")
       .then((res) => { if (!res.ok) throw new Error("Server error"); return res.json(); })
       .then((data) => { setHistory(Array.isArray(data) ? data : []); setLoading(false); })
       .catch(() => { setError("Failed to load patient data. Make sure the backend is running."); setLoading(false); });

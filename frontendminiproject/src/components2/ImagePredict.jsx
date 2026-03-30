@@ -31,7 +31,7 @@ function ImagePredict() {
     formData.append("image", image);   // key must match @RequestParam in Spring Boot
 
     try {
-      const res = await fetch("http://localhost:8080/api/predictImage", {  // FIXED URL
+      const res = await fetch("https://ttdeployment-1-gwu6.onrender.com/api/predictImage", {  // FIXED URL
         method: "POST",
         body: formData,
         // Do NOT set Content-Type header — browser sets it automatically with boundary

@@ -72,7 +72,7 @@ function Dashboard() {
     setMedicines([]); setSymptomCauses({});
 
     try {
-      const res = await fetch("http://localhost:8080/api/predict", {
+      const res = await fetch("https://ttdeployment-1-gwu6.onrender.com/api/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

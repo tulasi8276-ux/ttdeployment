@@ -17,7 +17,7 @@ function History() {
   const [expandedId, setExpandedId]         = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/history")   // FIXED: added /api
+    fetch("https://ttdeployment-1-gwu6.onrender.com/api/history")   // FIXED: added /api
       .then((res) => {
         if (!res.ok) throw new Error(`Server returned ${res.status}`);
         return res.json();
