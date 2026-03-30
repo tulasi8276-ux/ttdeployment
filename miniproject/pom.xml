@@ -8,7 +8,7 @@
 <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>4.0.3</version>
+    <version>3.3.5</version> <!-- stable version -->
     <relativePath/>
 </parent>
 
@@ -19,15 +19,17 @@
 <description>student JPA project for Spring Boot</description>
 
 <properties>
-    <java.version>25</java.version>
+    <java.version>17</java.version> <!-- FIXED -->
 </properties>
 
 <dependencies>
-<dependency>
-    <groupId>io.github.cdimascio</groupId>
-    <artifactId>dotenv-java</artifactId>
-    <version>3.0.0</version>
-</dependency>
+
+    <!-- dotenv -->
+    <dependency>
+        <groupId>io.github.cdimascio</groupId>
+        <artifactId>dotenv-java</artifactId>
+        <version>3.0.0</version>
+    </dependency>
 
     <!-- Spring Boot Web -->
     <dependency>
@@ -41,13 +43,13 @@
         <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
-    <!-- PostgreSQL Driver (Neon DB) -->
+    <!-- PostgreSQL -->
     <dependency>
         <groupId>org.postgresql</groupId>
         <artifactId>postgresql</artifactId>
     </dependency>
 
-    <!-- Lombok (Optional but useful) -->
+    <!-- Lombok -->
     <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
